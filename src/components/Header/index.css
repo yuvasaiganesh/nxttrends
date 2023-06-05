@@ -1,0 +1,66 @@
+/* Write your CSS code here */
+.header1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15%;
+  background-color: aqua;
+}
+.section1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section2 {
+  display: flex;
+  justify-content: space-between;
+}
+.website-logo {
+  height: 30px;
+  width: 100px;
+}
+.nav-logout {
+  height: 30px;
+  width: 50px;
+}
+.headerImage {
+  height: 30px;
+  width: 50px;
+}
+.header2 {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header1 {
+    display: none;
+  }
+  .header2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .headerContent {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #000000;
+  }
+  .logOutButton {
+    background-color: blue;
+    color: #ffffff;
+    font-size: 15px;
+    height: 40px;
+    width: 70px;
+  }
+  .optionSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  .website-logo {
+    height: 30px;
+    width: 150px;
+  }
+}

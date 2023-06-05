@@ -1,0 +1,56 @@
+/* Write your CSS code here */
+.homeSection {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 10px;
+}
+.contentSection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  font-size: 25px;
+  color: #1e293b;
+  font-family: 'Roboto';
+}
+.paragraph {
+  font-size: 13px;
+  color: #475569;
+  font-family: 'Roboto';
+}
+.button1 {
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #0b69ff;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  height: 20px;
+  width: 50px;
+}
+.addImage {
+  width: 50%;
+  height: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 35px;
+    color: #1e293b;
+    font-family: 'Roboto';
+  }
+  .paragraph {
+    font-size: 25px;
+  }
+  .button1 {
+    height: 30px;
+    width: 100px;
+  }
+}

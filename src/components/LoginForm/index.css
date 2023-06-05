@@ -1,0 +1,84 @@
+/* Write your CSS code here */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  height: 30%;
+}
+
+input {
+  height: 15px;
+  width: 30%;
+  color: #000000;
+}
+
+label {
+  color: #000000;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+.labelSection {
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+.websiteLogin {
+  width: 90%;
+  height: 50%;
+}
+.websiteLogo {
+  width: 60%;
+  height: 30px;
+}
+.logIn {
+  width: 50px;
+  background-color: blue;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .login {
+    flex-direction: row;
+  }
+  .formSection {
+    width: 40%;
+    height: 25%;
+  }
+  .websiteLogo {
+    width: 40%;
+  }
+  .websiteLogin {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login {
+    flex-direction: row;
+  }
+  .formSection {
+    width: 40%;
+  }
+  .websiteLogo {
+    width: 40%;
+  }
+  .websiteLogin {
+    width: 40%;
+  }
+}
