@@ -17,23 +17,29 @@ const Header = () => (
         />
       </div>
 
-      <div className="section2">
+      <ul className="section2">
+  <li>
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
           alt="nav home"
           className="headerImage"
         />
+  </li>
+  <li>
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
           alt="nav products"
           className="headerImage"
         />
+  </li>
+  <li>
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
           alt="nav cart"
           className="headerImage"
         />
-      </div>
+  </li?
+      </ul>
     </div>
 
     <div className="header2">
@@ -42,10 +48,10 @@ const Header = () => (
         alt="website logo"
         className="website-logo"
       />
-      <div className="optionSection">
-        <p className="headerContent">Home</p>
-        <p className="headerContent">Products</p>
-        <p className="headerContent">Cart</p>
+      <ul className="optionSection">
+        <li className="headerContent">Home</li>
+        <li className="headerContent">Products</li>
+        <li className="headerContent">Cart</li>
         <button type="button" className="logOutButton">
           Logout
         </button>
