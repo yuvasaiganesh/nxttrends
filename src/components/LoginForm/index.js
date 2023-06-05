@@ -8,7 +8,7 @@ class LoginForm extends Component {
 
   successSubmit = () => {
     const {history} = this.props
-    history.push('/')
+    history.replace('/')
   }
 
   changeUsername = event => {
