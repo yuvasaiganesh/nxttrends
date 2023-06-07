@@ -4,7 +4,7 @@ import {Component} from 'react'
 import './index.css'
 
 class LoginForm extends Component {
-  state = {userName: '', password: '', error: false}
+  state = {username: '', password: '', error: false, errorMsg:""}
 
   successSubmit = () => {
     const {history} = this.props
@@ -12,7 +12,7 @@ class LoginForm extends Component {
   }
 
   changeUsername = event => {
-    this.setState({userName: event.target.value})
+    this.setState({username: event.target.value})
   }
 
   changePassword = event => {
@@ -22,7 +22,7 @@ class LoginForm extends Component {
   toSubmit = async event => {
     event.preventDefault()
     const {userName, password} = this.state
-    const userDetails = {userName, password}
+    const userDetails = {username, password}
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -35,15 +35,15 @@ class LoginForm extends Component {
     const data = await response.json()
 
     console.log(data)
-    if (data.status === 404) {
-      this.setState({error: true})
+    if (data.status_code === 400) {
+      this.setState({error: true,errorMsg:data.error_msg})
     } else {
       this.successSubmit()
     }
   }
 
   render() {
-    const {userName, password, error} = this.state
+    const {username, password, error,errorMsg} = this.state
     return (
       <div className="login">
         <img
@@ -60,7 +60,7 @@ class LoginForm extends Component {
           <div className="labelSection">
             <label htmlFor="input1">UserName</label>
             <input
-              value={userName}
+              value={username}
               type="text"
               id="input1"
               placeholder="Username"
@@ -81,8 +81,9 @@ class LoginForm extends Component {
           <button className="logIn" type="submit">
             Login
           </button>
+          {error && <p className="error">{errorMsg}</p>}
         </form>
-        {error && <p className="error">Username and Password didnt match</p>}
+       
       </div>
     )
   }
